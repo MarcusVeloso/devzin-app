@@ -1,9 +1,16 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Component, ElementRef, OnInit, ViewChildren } from '@angular/core';
+import { FormBuilder, FormControlName, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { fromEvent, merge, Observable } from 'rxjs';
 import { DeveloperService } from 'src/app/services/developer.service';
 import { DisplayMessage, GenericValidator, ValidationMessages } from 'src/app/utils/generic-form-validation';
+
 import { Developer } from '../models/developer';
+
+export interface sexo {
+  id: string,
+  name: string
+}
 
 @Component({
   selector: 'app-developers-editar',
@@ -11,6 +18,15 @@ import { Developer } from '../models/developer';
   styleUrls: ['./developers-editar.component.css']
 })
 export class DevelopersEditarComponent implements OnInit {
+
+  sexoOpcoesLista: sexo[] = [
+    {id: '1', name: 'Masculino'},
+    {id: '2', name: 'Feminino'},
+    {id: '3', name: 'Não desejo informar'},
+    {id: '4', name: 'Outros'},
+  ];
+
+  @ViewChildren(FormControlName, { read: ElementRef }) formInputElements: ElementRef[];
 
   errors: any[] = [];
   developerForm: FormGroup;
@@ -23,7 +39,7 @@ export class DevelopersEditarComponent implements OnInit {
   constructor(private fb: FormBuilder,
     private developerService: DeveloperService,
     private router: Router,
-    private route: ActivatedRoute) { 
+    private route: ActivatedRoute) {
 
       this.validationMessages = {
         nome: {
@@ -76,6 +92,18 @@ export class DevelopersEditarComponent implements OnInit {
       idade: this.developer.idade,
       hobby: this.developer.hobby,
       datanascimento: this.developer.datanascimento,
+    });
+
+    
+    console.log(this.developerForm.value);
+  }
+
+  ngAfterViewInit(){
+    let controlBlurs: Observable<any>[] = this.formInputElements
+    .map((formControl: ElementRef) => fromEvent(formControl.nativeElement, 'blur'));
+
+    merge(...controlBlurs).subscribe(()=>{
+      this.displayMessage = this.genericValidator.processarMensagens(this.developerForm);      
     })
   }
 
