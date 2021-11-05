@@ -22,7 +22,7 @@
           <td>{{ developer.sexo }}</td>
           <td>{{ developer.idade }}</td>
           <td>{{ developer.hobby }}</td>
-          <td class="text-center">{{ developer.datanascimento }}</td>
+          <td class="text-center">{{ developer.datanascimento | date:['dd/MM/yyyy']}}</td>
               
           <td class="text-right">
               <button class="btn btn-warning" [routerLink]="['/developers-editar/', developer.id]">Editar</button>&nbsp;

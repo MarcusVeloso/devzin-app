@@ -57,7 +57,7 @@
                   </div>
               </div>
 
-              <div class="form-group"> 
+              <!-- <div class="form-group"> 
                   <label class="control-label">Data de Nascimento</label>
                   <div>
                       <input class="form-control" id="datanascimento" type="text" placeholder="datanascimento (requerido)" formControlName="datanascimento" [ngClass]="{'is-invalid': displayMessage.datanascimento }" />
@@ -65,10 +65,28 @@
                           <p [innerHTML]="displayMessage.datanascimento"></p>
                       </span>
                   </div>
+              </div> -->
+
+              <div class="form-group"> 
+                <label class="control-label">Data de Nascimento</label>
+                    <div>
+                    <div class="form-group">
+                      <input type="text"
+                         placeholder="DD/MM/AAAA"
+                         class="form-control"
+                         bsDatepicker
+                         [bsConfig]="bsConfig"
+                         
+                         [bsValue]="datanascimento"
+                         id="datanascimento"
+                         formControlName="datanascimento"
+                         >
+                    </div>
+                </div>
               </div>
+
             </div>
       </div>
-
 
       <div class="form-group">
           <input type="submit" value="Salvar" class="btn btn-primary">&nbsp;

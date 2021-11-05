@@ -32,3 +32,7 @@ https://www.npmjs.com/package/json-server
 
 Start JSON Server
 $ json-server --watch db.json
+
+## Ngx-Nootstrap
+$ ng add ngx-bootstrap  --component datepicker
+https://valor-software.com/ngx-bootstrap/#/datepicker

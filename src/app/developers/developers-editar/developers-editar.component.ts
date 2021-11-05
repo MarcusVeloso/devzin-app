@@ -5,6 +5,9 @@ import { fromEvent, merge, Observable } from 'rxjs';
 import { DeveloperService } from 'src/app/services/developer.service';
 import { DisplayMessage, GenericValidator, ValidationMessages } from 'src/app/utils/generic-form-validation';
 
+const moment = require('moment');
+
+import { BsDatepickerConfig } from 'ngx-bootstrap/datepicker';
 import { Developer } from '../models/developer';
 
 export interface sexo {
@@ -36,6 +39,10 @@ export class DevelopersEditarComponent implements OnInit {
   genericValidator: GenericValidator;
   displayMessage: DisplayMessage = {};
 
+  colorTheme = 'theme-dark-blue'; 
+  bsConfig?: Partial<BsDatepickerConfig>;
+  datanascimento: Date;
+
   constructor(private fb: FormBuilder,
     private developerService: DeveloperService,
     private router: Router,
@@ -60,6 +67,7 @@ export class DevelopersEditarComponent implements OnInit {
       };
 
       this.genericValidator = new GenericValidator(this.validationMessages);
+      this.bsConfig = Object.assign({}, { containerClass: this.colorTheme });
     }
 
   ngOnInit(): void {
@@ -94,8 +102,7 @@ export class DevelopersEditarComponent implements OnInit {
       datanascimento: this.developer.datanascimento,
     });
 
-    
-    console.log(this.developerForm.value);
+    this.datanascimento = new Date(this.developer.datanascimento);
   }
 
   ngAfterViewInit(){
@@ -124,7 +131,6 @@ export class DevelopersEditarComponent implements OnInit {
 
   processarSucesso(response:any){
     console.log("gravou");
-    
   }
 
   processarFalha(response:any){

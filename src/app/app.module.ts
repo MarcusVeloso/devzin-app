@@ -13,6 +13,9 @@ import { DevelopersNovoComponent } from './developers/developers-novo/developers
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { DevelopersExcluirComponent } from './developers/developers-excluir/developers-excluir.component';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,6 +32,8 @@ import { DevelopersExcluirComponent } from './developers/developers-excluir/deve
     HttpClientModule,
     BrowserModule,
     NgbModule,
+    BrowserAnimationsModule,
+    BsDatepickerModule.forRoot(),
   ],
   providers: [
     DeveloperService
