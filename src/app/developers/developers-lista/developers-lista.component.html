@@ -27,8 +27,7 @@
           <td>{{ developer.datanascimento }}</td>
               
           <td class="text-right">
-              <button class="btn btn-warning" [routerLink]="['/developers/editar',developer.id]">Editar</button>
-              <button class="btn btn-danger" [routerLink]="['/developers/excluir',developer.id]">Excluir</button>
+              <button class="btn btn-warning" [routerLink]="['/developers-editar/', developer.id]">Editar</button>
           </td>
       </tr>
   </table>

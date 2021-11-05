@@ -20,4 +20,26 @@ export class DeveloperService extends BaseService {
                .get<Developer[]>(this.UrlV1 + "developers")
                .pipe(catchError(super.serviceError));
   }
+
+  obterPorId(id:string): Observable<Developer> {
+    return this.http
+               .get<Developer>(this.UrlV1 + "developers/" + id)
+               .pipe(catchError(super.serviceError)); 
+  }
+
+  novoDeveloper(developer: Developer): Observable<Developer>{
+    return this.http
+               .post(this.UrlV1 + "developers", developer)
+               .pipe(
+                 map(super.extractData),
+                 catchError(super.serviceError));
+  }
+
+  atualizarDeveloper(developer: Developer): Observable<Developer>{
+    return this.http
+               .put(this.UrlV1 + "developers/" + developer.id, developer)
+               .pipe(
+                 map(this.extractData),
+                 catchError(super.serviceError));
+  }
 }

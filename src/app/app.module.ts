@@ -5,20 +5,26 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DeveloperService } from './services/developer.service';
 import { DevelopersListaComponent } from './developers/developers-lista/developers-lista.component';
-import { DevelopersFormComponent } from './developers/developers-form/developers-form.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DevelopersEditarComponent } from './developers/developers-editar/developers-editar.component';
+import { DevelopersNovoComponent } from './developers/developers-novo/developers-novo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DevelopersListaComponent,
-    DevelopersFormComponent
+    DevelopersEditarComponent,
+    DevelopersNovoComponent
   ],
   imports: [
-    BrowserModule,
+    CommonModule,
     AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
-    
+    BrowserModule,
   ],
   providers: [
     DeveloperService
