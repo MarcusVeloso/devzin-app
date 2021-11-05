@@ -42,4 +42,12 @@ export class DeveloperService extends BaseService {
                  map(this.extractData),
                  catchError(super.serviceError));
   }
+
+  excluirDeveloper(id: string): Observable<Developer> {
+    return this.http
+               .delete(this.UrlV1 + "developers/" + id)
+               .pipe(
+                 map(super.extractData),
+                 catchError(this.serviceError));
+  }
 }

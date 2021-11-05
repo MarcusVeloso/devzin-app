@@ -10,13 +10,16 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DevelopersEditarComponent } from './developers/developers-editar/developers-editar.component';
 import { DevelopersNovoComponent } from './developers/developers-novo/developers-novo.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { DevelopersExcluirComponent } from './developers/developers-excluir/developers-excluir.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DevelopersListaComponent,
     DevelopersEditarComponent,
-    DevelopersNovoComponent
+    DevelopersNovoComponent,
+    DevelopersExcluirComponent
   ],
   imports: [
     CommonModule,
@@ -25,6 +28,7 @@ import { DevelopersNovoComponent } from './developers/developers-novo/developers
     ReactiveFormsModule,
     HttpClientModule,
     BrowserModule,
+    NgbModule,
   ],
   providers: [
     DeveloperService

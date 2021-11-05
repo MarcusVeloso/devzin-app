@@ -55,14 +55,6 @@
       "idade": 22,
       "hobby": "Pescar G",
       "datanascimento": "11/11/1992"
-    },
-    {
-      "id": 8,
-      "nome": "Junior",
-      "sexo": "Masculino",
-      "idade": "18",
-      "hobby": "PS4",
-      "datanascimento": "11/01/2003"
     }
   ]
 }

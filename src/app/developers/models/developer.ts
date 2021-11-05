@@ -1,5 +1,5 @@
 export class Developer {
-  id: number;
+  id: string;
   nome: string;
   sexo: string;
   idade: number;

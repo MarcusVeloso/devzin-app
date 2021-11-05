@@ -65,7 +65,6 @@ export class DevelopersEditarComponent implements OnInit {
             this.developer = developer;
             this.preencheForm();
           });
-          
       });
   }
 
