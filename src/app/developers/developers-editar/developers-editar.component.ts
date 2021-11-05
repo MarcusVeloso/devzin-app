@@ -5,8 +5,6 @@ import { fromEvent, merge, Observable } from 'rxjs';
 import { DeveloperService } from 'src/app/services/developer.service';
 import { DisplayMessage, GenericValidator, ValidationMessages } from 'src/app/utils/generic-form-validation';
 
-const moment = require('moment');
-
 import { BsDatepickerConfig } from 'ngx-bootstrap/datepicker';
 import { Developer } from '../models/developer';
 
@@ -41,7 +39,7 @@ export class DevelopersEditarComponent implements OnInit {
 
   colorTheme = 'theme-dark-blue'; 
   bsConfig?: Partial<BsDatepickerConfig>;
-  datanascimento: Date;
+  datanascimento: Date = new Date();
 
   constructor(private fb: FormBuilder,
     private developerService: DeveloperService,

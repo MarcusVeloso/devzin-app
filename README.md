@@ -36,3 +36,9 @@ $ json-server --watch db.json
 ## Ngx-Nootstrap
 $ ng add ngx-bootstrap  --component datepicker
 https://valor-software.com/ngx-bootstrap/#/datepicker
+
+## Moment
+
+$ npm i moment --save
+$ npm i @types/node
+https://momentjs.com/

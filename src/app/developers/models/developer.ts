@@ -4,5 +4,5 @@ export class Developer {
   sexo: string;
   idade: number;
   hobby: string;
-  datanascimento: string;
+  datanascimento: Date;
 }

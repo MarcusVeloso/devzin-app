@@ -40,7 +40,7 @@
               <div class="form-group"> 
                   <label class="control-label">Idade</label>
                   <div>
-                      <input class="form-control" id="idade" type="text" placeholder="idade (requerido)" formControlName="idade" [ngClass]="{'is-invalid': displayMessage.idade }" />
+                      <input class="form-control" id="idade" type="number" placeholder="idade (requerido)" formControlName="idade" [ngClass]="{'is-invalid': displayMessage.idade }" />
                       <span class="text-danger" *ngIf="displayMessage.idade">
                           <p [innerHTML]="displayMessage.idade"></p>
                       </span>

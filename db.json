@@ -18,8 +18,8 @@
     },
     {
       "id": 3,
-      "nome": "Camilla",
-      "sexo": "2",
+      "nome": "Camilla da Silva",
+      "sexo": "4",
       "idade": "29",
       "hobby": "Fazer vídeos no tiktok",
       "datanascimento": "11/11/1989"
@@ -30,7 +30,7 @@
       "sexo": "3",
       "idade": "32",
       "hobby": "Jogar bola",
-      "datanascimento": "1997-05-13T03:00:00.000Z"
+      "datanascimento": "11/11/1989"
     },
     {
       "id": 5,
@@ -54,7 +54,7 @@
       "sexo": "1",
       "idade": 22,
       "hobby": "Pescar G",
-      "datanascimento": "2000-02-09T02:00:00.000Z"
+      "datanascimento": "11/11/1989"
     }
   ]
 }
