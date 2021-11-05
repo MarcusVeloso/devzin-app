@@ -1,0 +1,35 @@
+<div class="container main-container">
+
+  <h1>Lista de Developers</h1>
+
+  <p>
+      <a class="btn btn-info" [routerLink]="['/developers/novo']">Novo Developer</a>
+  </p>
+
+  <table class="table table-hover">
+      <thead class="thead-dark">
+          <tr>
+              <th>Id</th>
+              <th>Nome</th>
+              <th>Sexo</th>
+              <th>Idade</th>
+              <th>Hobby</th>
+              <th>Data de nascimento</th>
+              <th></th>
+          </tr>
+      </thead>
+      <tr *ngFor="let developer of developers">
+          <td>{{ developer.id }}</td>
+          <td>{{ developer.nome }}</td>
+          <td>{{ developer.sexo }}</td>
+          <td>{{ developer.idade }}</td>
+          <td>{{ developer.hobby }}</td>
+          <td>{{ developer.datanascimento }}</td>
+              
+          <td class="text-right">
+              <button class="btn btn-warning" [routerLink]="['/developers/editar',developer.id]">Editar</button>
+              <button class="btn btn-danger" [routerLink]="['/developers/excluir',developer.id]">Excluir</button>
+          </td>
+      </tr>
+  </table>
+</div>
