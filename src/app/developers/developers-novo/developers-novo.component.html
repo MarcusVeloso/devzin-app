@@ -24,42 +24,57 @@
                       </span>
                   </div>
               </div>
-              <div class="form-group"> 
-                  <label class="control-label">Sexo</label>
-                  <div>
-                      <input class="form-control" id="sexo" type="text" placeholder="sexo (requerido)" formControlName="sexo" [ngClass]="{'is-invalid': displayMessage.sexo }" />
-                      <span class="text-danger" *ngIf="displayMessage.sexo">
-                          <p [innerHTML]="displayMessage.sexo"></p>
-                      </span>
-                  </div>
+
+               <div class="form-group"> 
+                <label class="control-label">Sexo</label>
+                <div class="form-group"> 
+                    <select class="form-control" id="sexo" formControlName="sexo">
+                        <option *ngFor="let item of sexoOpcoesLista" type="text" id="sexo" [value]="item.id"> {{item.name}} </option>
+                    </select>
+                    <span class="text-danger" *ngIf="displayMessage.sexo">
+                        <p [innerHTML]="displayMessage.sexo"></p>
+                    </span>
+                </div>
               </div>
+
               <div class="form-group"> 
                   <label class="control-label">Idade</label>
                   <div>
-                      <input class="form-control" id="idade" type="text" placeholder="idade (requerido)" formControlName="idade" [ngClass]="{'is-invalid': displayMessage.idade }" />
+                      <input class="form-control" id="idade" type="number" placeholder="Idade (requerido)" formControlName="idade" [ngClass]="{'is-invalid': displayMessage.idade }" />
                       <span class="text-danger" *ngIf="displayMessage.idade">
                           <p [innerHTML]="displayMessage.idade"></p>
                       </span>
                   </div>
               </div>
+
               <div class="form-group"> 
                   <label class="control-label">Hobby</label>
                   <div>
-                      <input class="form-control" id="hobby" type="text" placeholder="hobby (requerido)" formControlName="hobby" [ngClass]="{'is-invalid': displayMessage.hobby }" />
+                      <input class="form-control" id="hobby" type="text" placeholder="Hobby (requerido)" formControlName="hobby" [ngClass]="{'is-invalid': displayMessage.hobby }" />
                       <span class="text-danger" *ngIf="displayMessage.hobby">
                           <p [innerHTML]="displayMessage.hobby"></p>
                       </span>
                   </div>
               </div>
+
               <div class="form-group"> 
-                  <label class="control-label">Data de Nascimento</label>
-                  <div>
-                      <input class="form-control" id="datanascimento" type="text" placeholder="datanascimento (requerido)" formControlName="datanascimento" [ngClass]="{'is-invalid': displayMessage.datanascimento }" />
-                      <span class="text-danger" *ngIf="displayMessage.datanascimento">
-                          <p [innerHTML]="displayMessage.datanascimento"></p>
-                      </span>
-                  </div>
+                <label class="control-label">Data de Nascimento</label>
+                    <div>
+                    <div class="form-group">
+                      <input type="text"
+                         placeholder="DD/MM/AAAA"
+                         class="form-control"
+                         bsDatepicker
+                         [bsConfig]="bsConfig"
+                         autocomplete = "off"
+                         [bsValue]="datanascimento"
+                         id="datanascimento"
+                         formControlName="datanascimento"
+                         >
+                    </div>
+                </div>
               </div>
+
           </div>
       </div>
 

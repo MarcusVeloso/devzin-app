@@ -55,6 +55,14 @@
       "idade": 22,
       "hobby": "Pescar G",
       "datanascimento": "11/11/1989"
+    },
+    {
+      "id": 8,
+      "nome": "Jurive Hillux",
+      "sexo": "1",
+      "idade": 25,
+      "hobby": "Patinar",
+      "datanascimento": "1989-11-07T02:00:00.000Z"
     }
   ]
 }

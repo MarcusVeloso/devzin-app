@@ -57,16 +57,6 @@
                   </div>
               </div>
 
-              <!-- <div class="form-group"> 
-                  <label class="control-label">Data de Nascimento</label>
-                  <div>
-                      <input class="form-control" id="datanascimento" type="text" placeholder="datanascimento (requerido)" formControlName="datanascimento" [ngClass]="{'is-invalid': displayMessage.datanascimento }" />
-                      <span class="text-danger" *ngIf="displayMessage.datanascimento">
-                          <p [innerHTML]="displayMessage.datanascimento"></p>
-                      </span>
-                  </div>
-              </div> -->
-
               <div class="form-group"> 
                 <label class="control-label">Data de Nascimento</label>
                     <div>
@@ -76,7 +66,7 @@
                          class="form-control"
                          bsDatepicker
                          [bsConfig]="bsConfig"
-                         
+                         autocomplete = "off"
                          [bsValue]="datanascimento"
                          id="datanascimento"
                          formControlName="datanascimento"
