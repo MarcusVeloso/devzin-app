@@ -43,9 +43,8 @@ $ npm install -g json-server
 Template bootstrap
 $ ng add ngx-bootstrap
 ```
-```
 
-## Inicie os dois serviços
+## Inicie os serviços
 ```sh
 Inicie o serviço
 ng serve
