@@ -43,14 +43,17 @@ $ npm install -g json-server
 Template bootstrap
 $ ng add ngx-bootstrap
 ```
-```sh
-Inicie o serviço de base de dados
-$ json-server --watch db.json
 ```
+
+## Inicie os dois serviços
 ```sh
 Inicie o serviço
 ng serve
 ```
+```sh
+Inicie o serviço de base de dados
+$ json-server --watch db.json
+
 Acesse:
 [Acesse a aplicação](http://localhost:4200/)
 
