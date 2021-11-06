@@ -27,6 +27,12 @@ export class DeveloperService extends BaseService {
                .pipe(catchError(super.serviceError)); 
   }
 
+  obterPorFullTextSearch(parametro:string): Observable<Developer[]> {
+    return this.http
+               .get<Developer[]>(this.UrlV1 + "developers?q=" + parametro)
+               .pipe(catchError(super.serviceError)); 
+  }
+
   novoDeveloper(developer: Developer): Observable<Developer>{
     return this.http
                .post(this.UrlV1 + "developers", developer)

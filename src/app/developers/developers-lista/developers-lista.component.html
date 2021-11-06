@@ -6,6 +6,16 @@
       <a class="btn btn-info" [routerLink]="['/developers/novo']">Novo Developer</a>
   </p>
 
+  <div class="row">
+		<div class="col-10">
+			<input class="form-control" type="text" placeholder="Pesquisa..." [(ngModel)]="parametroPesquisa">
+		</div>
+		<div class="col-2">
+			<button type="button" class="btn btn-primary" (click)="pesquisar(parametroPesquisa)">Pesquisar</button>
+		</div>
+  </div>
+	<br>
+
   <table class="table table-hover">
       <thead class="thead-dark">
           <tr>
