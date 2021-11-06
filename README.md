@@ -1,44 +1,58 @@
-# DevzinApp
+# Devzin
+App frontend para gerenciar Developers
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.12.
+## Features
+- Listar developers
+- Cadastrar developer
+- Editar developer
+- Excluir developer
+- Pesquisar developer
 
-## Development server
+## Tech
+Devzin utiliza o framework Angular
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Installation
 
-## Code scaffolding
+Devzin requer:
+- [Node.js](https://nodejs.org/) v14+
+- [Angular](https://angular.io/cli) 9x
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Instale as dependências para iniciar o servidor.
 
-## Build
+```sh
+$ npm install @angular/cli@9.1.12
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+### Acesse o projeto
+```sh
+$ cd devzin
+````
+### Instale as depenências
+```sh
+$ npm i
+```
 
-## Running unit tests
+## Instalação manual da dependências
+Caso tenha algum problema, instale as dependências:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-
-## json-server
+```sh
+Servidor de dados json
 $ npm install -g json-server
-https://www.npmjs.com/package/json-server
-
-Start JSON Server
+```
+```sh
+Template bootstrap
+$ ng add ngx-bootstrap
+```
+```sh
+Inicie o serviço de base de dados
 $ json-server --watch db.json
+```
+```sh
+Inicie o serviço
+ng serve
+```
+Acesse:
+[Acesse a aplicação](http://localhost:4200/)
 
-## Ngx-Nootstrap
-$ ng add ngx-bootstrap  --component datepicker
-https://valor-software.com/ngx-bootstrap/#/datepicker
-
-## Moment
-
-$ npm i moment --save
-$ npm i @types/node
-https://momentjs.com/
+## License
+MIT
