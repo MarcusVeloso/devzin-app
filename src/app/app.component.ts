@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'devzin-app';
+
+  public isCollapsed: boolean;
+
+  constructor() {
+    this.isCollapsed = true;
+  }
 }
