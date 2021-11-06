@@ -6,3 +6,8 @@ export class Developer {
   hobby: string;
   datanascimento: Date;
 }
+
+export interface Sexo {
+  id: string,
+  name: string
+}

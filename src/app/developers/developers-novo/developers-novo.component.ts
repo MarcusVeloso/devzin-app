@@ -6,12 +6,7 @@ import { DeveloperService } from 'src/app/services/developer.service';
 import { DisplayMessage, GenericValidator, ValidationMessages } from 'src/app/utils/generic-form-validation';
 
 import { BsDatepickerConfig } from 'ngx-bootstrap/datepicker';
-import { Developer } from '../models/developer';
-
-export interface sexo {
-  id: string,
-  name: string
-}
+import { Developer, Sexo } from '../models/developer';
 
 @Component({
   selector: 'app-developers-novo',
@@ -20,7 +15,7 @@ export interface sexo {
 })
 export class DevelopersNovoComponent implements OnInit {
 
-  sexoOpcoesLista: sexo[] = [
+  sexoOpcoesLista: Sexo[] = [
     {id: '1', name: 'Masculino'},
     {id: '2', name: 'Feminino'},
     {id: '3', name: 'Não desejo informar'},
