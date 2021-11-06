@@ -52,8 +52,8 @@ ng serve
 ```sh
 Inicie o serviço de base de dados
 $ json-server --watch db.json
+```
 
-Acesse:
 [Acesse a aplicação](http://localhost:4200/)
 
 ## License
