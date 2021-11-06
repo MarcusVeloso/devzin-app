@@ -16,6 +16,8 @@ import { DevelopersExcluirComponent } from './developers/developers-excluir/deve
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker'
 
+import { ToastrModule } from 'ngx-toastr';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,6 +36,7 @@ import { BsDatepickerModule } from 'ngx-bootstrap/datepicker'
     NgbModule,
     BrowserAnimationsModule,
     BsDatepickerModule.forRoot(),
+    ToastrModule.forRoot(),
   ],
   providers: [
     DeveloperService

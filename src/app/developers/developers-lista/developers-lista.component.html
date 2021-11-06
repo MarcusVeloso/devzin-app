@@ -1,42 +1,41 @@
 <div class="container main-container">
 
-  <h1>Lista de Developers</h1>
+  <h3>Lista de Developers</h3>
 
-  <p>
-      <a class="btn btn-info" [routerLink]="['/developers/novo']">Novo Developer</a>
-  </p>
-
-  <div class="row">
-		<div class="col-10">
-			<input class="form-control" type="text" placeholder="Pesquisa..." [(ngModel)]="parametroPesquisa">
-		</div>
-		<div class="col-2">
-			<button type="button" class="btn btn-primary" (click)="pesquisar(parametroPesquisa)">Pesquisar</button>
-		</div>
+  <div class="input-group">
+    <input type="text" class="form-control" placeholder="Pesquisa..."
+        [(ngModel)]="parametroPesquisa">
+    <button class="btn btn-outline-primary button-pesquisar btn-limpar" type="button"
+        (click)="limparPesquisa()">Limpar</button>
+    <button class="btn btn-outline-primary button-pesquisar" type="button"
+        (click)="pesquisar(parametroPesquisa)">Pesquisa</button>
   </div>
+
 	<br>
 
   <table class="table table-hover">
-      <thead class="thead-dark">
+      <thead class="table-default">
           <tr>
               <th>Nome</th>
-              <th>Sexo</th>
               <th>Idade</th>
-              <th>Hobby</th>
+              <th class="text-center">Hobby</th>
               <th class="text-center">Data de nascimento</th>
               <th></th>
           </tr>
       </thead>
       <tr *ngFor="let developer of developers">
           <td>{{ developer.nome }}</td>
-          <td>{{ developer.sexo }}</td>
           <td>{{ developer.idade }}</td>
-          <td>{{ developer.hobby }}</td>
+          <td class="text-center">{{ developer.hobby }}</td>
           <td class="text-center">{{ developer.datanascimento | date:"dd/MM/yyyy" }}</td>
-              
-          <td class="text-right">
-              <button class="btn btn-warning" [routerLink]="['/developers-editar/', developer.id]">Editar</button>&nbsp;
-              <button class="btn btn-danger" [routerLink]="['/developers-excluir/', developer.id]">Excluir</button>
+          <td>
+              <div ngbDropdown class="d-inline-block">
+                <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Ações</button>
+                <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                <button ngbDropdownItem [routerLink]="['/developers-editar/', developer.id]">Editar</button>
+                <button ngbDropdownItem [routerLink]="['/developers-excluir/', developer.id]">Excluir</button>
+                </div>
+            </div>
           </td>
       </tr>
   </table>

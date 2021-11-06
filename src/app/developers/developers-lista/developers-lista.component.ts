@@ -32,11 +32,15 @@ export class DevelopersListaComponent implements OnInit {
       this.consultaPadrao();
       return;
     }
-    
     this.developersService.obterPorFullTextSearch(parametro)
         .subscribe(
           developers => this.developers = developers,
           erro => this.erroMessage
         )
+  }
+
+  limparPesquisa(){
+    this.parametroPesquisa = '';
+    this.consultaPadrao();
   }
 }

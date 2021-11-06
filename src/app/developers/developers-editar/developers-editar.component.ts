@@ -5,6 +5,8 @@ import { fromEvent, merge, Observable } from 'rxjs';
 import { DeveloperService } from 'src/app/services/developer.service';
 import { DisplayMessage, GenericValidator, ValidationMessages } from 'src/app/utils/generic-form-validation';
 
+import { ToastrService } from 'ngx-toastr';
+
 import { BsDatepickerConfig } from 'ngx-bootstrap/datepicker';
 import { Developer, Sexo } from '../models/developer';
 
@@ -39,7 +41,8 @@ export class DevelopersEditarComponent implements OnInit {
   constructor(private fb: FormBuilder,
     private developerService: DeveloperService,
     private router: Router,
-    private route: ActivatedRoute) {
+    private route: ActivatedRoute,
+    private toastr: ToastrService) {
 
       this.validationMessages = {
         nome: {
@@ -114,7 +117,7 @@ export class DevelopersEditarComponent implements OnInit {
       this.developerService.atualizarDeveloper(this.developer)
           .subscribe(
             sucesso => {
-              this.processarSucesso(sucesso);
+              this.processarSucesso();
               this.router.navigate(['/developers-listar-todos']);
             },
             falha => {this.processarFalha(falha)}
@@ -122,11 +125,19 @@ export class DevelopersEditarComponent implements OnInit {
     }
   }
 
-  processarSucesso(response:any){
-    console.log("gravou");
+  processarSucesso(){
+    this.errors = [];
+
+    let toast = this.toastr.success('Developer atualizado com sucesso!', 'Sucesso!');
+    if (toast) {
+      toast.onHidden.subscribe(() => {
+        this.router.navigate(['/developers-listar-todos']);
+      });
+    }
   }
 
-  processarFalha(response:any){
-    console.log("falhou");
+  processarFalha(fail:any){
+    this.errors = fail.error.errors;
+    this.toastr.error('Ocorreu um erro!', 'Atenção');
   }
 }

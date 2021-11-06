@@ -1,0 +1,15 @@
+.button-pesquisar {
+  margin-left: -1px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.btn-limpar {
+border-top-right-radius: 0;
+border-bottom-right-radius: 0;
+}
+
+.input-group .btn {
+  position: relative;
+  z-index: 2;
+}
