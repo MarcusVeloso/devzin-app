@@ -3,11 +3,11 @@
   <h3>Lista de Developers</h3>
 
   <div class="input-group">
-    <input type="text" class="form-control" placeholder="Pesquisa..."
+    <input type="text" class="form-control" id="parametroPesquisa" placeholder="Pesquisa..."
         [(ngModel)]="parametroPesquisa">
     <button class="btn btn-outline-primary button-pesquisar btn-limpar" type="button"
         (click)="limparPesquisa()">Limpar</button>
-    <button class="btn btn-outline-primary button-pesquisar" type="button"
+    <button class="btn btn-outline-primary button-pesquisar" id="pesquisar" type="button"
         (click)="pesquisar(parametroPesquisa)">Pesquisa</button>
   </div>
 
