@@ -14,6 +14,7 @@ describe('Testes da página excluir developer', () => {
   });
 
   it('deve excluir o registro do developer com sucesso', () => {
+      page.iniciarNavegacao();
       page.botaoConfirmar.click();
       page.esperar(3000);
       expect(page.redirecionadoParaListarTodos()).toEqual('Lista de Developers');

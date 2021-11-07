@@ -8,7 +8,7 @@ export class AppExcluirPage extends AppBasePage {
   }
 
   navegarParaExcluir(){
-    this.navegarViaUlr('/developers-excluir/12');
+    this.navegarViaUlr('/developers-excluir/10');
   }
 
   iniciarNavegacao(){
