@@ -1,16 +1,16 @@
-import { AppPage } from './app.po';
+import { AppDevelopersListarTodosPage } from './app.listar-todos.po';
 import { browser, logging } from 'protractor';
 
-describe('workspace-project App', () => {
-  let page: AppPage;
+describe('Testes da página developers listar todos', () => {
+  let page: AppDevelopersListarTodosPage;
 
   beforeEach(() => {
-    page = new AppPage();
+    page = new AppDevelopersListarTodosPage();
   });
 
-  it('should display welcome message', () => {
-    page.navigateTo();
-    expect(page.getTitleText()).toEqual('devzin-app app is running!');
+  it('deve estar na página listar todos', () => {
+    page.navegarParaHome();
+    expect(page.getTitleText()).toEqual('Lista de Developers');
   });
 
   afterEach(async () => {
