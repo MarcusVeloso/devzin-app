@@ -106,7 +106,7 @@ export class DevelopersNovoComponent implements OnInit {
 
     let toast = this.toastr.success('Developer insedido com sucesso!', 'Sucesso!');
     if (toast) {
-      toast.onHidden.subscribe(() => {
+      toast.onAction.subscribe(() => {
         this.router.navigate(['/developers-listar-todos']);
       });
     }
