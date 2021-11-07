@@ -20,13 +20,13 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'devzin-app'`, () => {
+  it(`deve ter o título title 'Devzin'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('devzin-app');
+    expect(app.title).toEqual('Devzin');
   });
 
-  it('should render title', () => {
+  it('deve rendere', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
