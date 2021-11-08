@@ -38,6 +38,8 @@ export class DevelopersEditarComponent implements OnInit {
   bsConfig?: Partial<BsDatepickerConfig>;
   datanascimento: Date = new Date();
 
+  dadosNaoSalvos: boolean;
+
   constructor(private fb: FormBuilder,
     private developerService: DeveloperService,
     private router: Router,
@@ -106,7 +108,8 @@ export class DevelopersEditarComponent implements OnInit {
     .map((formControl: ElementRef) => fromEvent(formControl.nativeElement, 'blur'));
 
     merge(...controlBlurs).subscribe(()=>{
-      this.displayMessage = this.genericValidator.processarMensagens(this.developerForm);      
+      this.displayMessage = this.genericValidator.processarMensagens(this.developerForm);
+      this.dadosNaoSalvos = true;
     })
   }
 
@@ -121,7 +124,9 @@ export class DevelopersEditarComponent implements OnInit {
               this.router.navigate(['/developers-listar-todos']);
             },
             falha => {this.processarFalha(falha)}
-          )
+          );
+
+          this.dadosNaoSalvos = false;
     }
   }
 

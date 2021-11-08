@@ -17,6 +17,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker'
 
 import { ToastrModule } from 'ngx-toastr';
+import { DeveloperGuard } from './services/developer.guard';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { ToastrModule } from 'ngx-toastr';
     ToastrModule.forRoot(),
   ],
   providers: [
-    DeveloperService
+    DeveloperService,
+    DeveloperGuard,
   ],
   bootstrap: [AppComponent]
 })
