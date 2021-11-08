@@ -60,33 +60,17 @@
       "id": 8,
       "nome": "Jurive Hillux",
       "sexo": "1",
-      "idade": "0",
+      "idade": "23",
       "hobby": "Patinar",
-      "datanascimento": "2021-02-03T03:00:00.000Z"
+      "datanascimento": "1998-01-05T02:00:00.000Z"
     },
     {
       "id": 9,
       "nome": "Marcelinho Silva",
       "sexo": "1",
-      "hobby": "Jogar Gears of War 3",
-      "datanascimento": "1997-02-12T02:00:00.000Z",
-      "idade": "24"
-    },
-    {
-      "id": 11,
-      "nome": "Marcelinho Silva",
-      "sexo": "1",
-      "idade": "3",
-      "hobby": "Jogar Gears of War 3",
-      "datanascimento": "2018-05-09T03:00:00.000Z"
-    },
-    {
-      "id": 12,
-      "nome": "Telma da silva",
-      "sexo": "2",
-      "idade": "2",
-      "hobby": "Pescar",
-      "datanascimento": "2019-02-06T02:40:56.000Z"
+      "idade": "7",
+      "hobby": "Dançar",
+      "datanascimento": "2014-02-05T02:44:53.000Z"
     }
   ]
 }

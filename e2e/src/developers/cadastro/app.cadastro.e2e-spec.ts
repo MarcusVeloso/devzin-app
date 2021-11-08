@@ -16,7 +16,6 @@ describe('Testes da página novo developer', () => {
   it('deve preencher o formulário novo developer com sucesso', () => {
         page.campoNome.sendKeys('Marcelinho Silva');
         page.campoSexo.sendKeys('Masculino');
-        page.campoIdade.sendKeys('20');
         page.campoHobby.sendKeys('Jogar Gears of War 3');
         page.campoDataNascimento.sendKeys('10-10-2001');
 

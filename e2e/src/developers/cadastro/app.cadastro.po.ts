@@ -30,7 +30,6 @@ export class AppCadastroPage extends AppBasePage {
 
   campoNome = element(by.id('nome'));
   campoSexo = element(by.id('sexo'));
-  campoIdade = element(by.id('idade'));
   campoHobby = element(by.id('hobby'));
   campoDataNascimento = element(by.id('datanascimento'));
 
