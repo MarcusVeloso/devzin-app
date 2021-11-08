@@ -4,49 +4,49 @@
       "id": 1,
       "nome": "Argenor da Silva",
       "sexo": "1",
-      "idade": "25",
+      "idade": "97",
       "hobby": "Tocar violão",
-      "datanascimento": "11/11/1992"
+      "datanascimento": "1924-11-02T03:00:00.000Z"
     },
     {
       "id": 2,
       "nome": "Bárbara",
       "sexo": "2",
-      "idade": 22,
+      "idade": "75",
       "hobby": "Cantar",
-      "datanascimento": "11/11/1992"
+      "datanascimento": "1946-05-07T03:00:00.000Z"
     },
     {
       "id": 3,
-      "nome": "Camilla da Silva",
+      "nome": "Camilla da Silvaa",
       "sexo": "4",
-      "idade": "29",
       "hobby": "Fazer vídeos no tiktok",
-      "datanascimento": "11/11/1989"
+      "datanascimento": "1995-05-16T03:00:00.000Z",
+      "idade": "26"
     },
     {
       "id": 4,
       "nome": "Dante",
       "sexo": "3",
-      "idade": "32",
+      "idade": "48",
       "hobby": "Jogar bola",
-      "datanascimento": "11/11/1989"
+      "datanascimento": "1973-11-03T02:00:00.000Z"
     },
     {
       "id": 5,
       "nome": "Ed Gama",
       "sexo": "4",
-      "idade": 22,
+      "idade": "29",
       "hobby": "Dançar",
-      "datanascimento": "11/11/1992"
+      "datanascimento": "1992-11-03T02:00:00.000Z"
     },
     {
       "id": 6,
-      "nome": "Flávio",
+      "nome": "Flávioa",
       "sexo": "1",
-      "idade": 22,
+      "idade": "29",
       "hobby": "Jogar vôlei",
-      "datanascimento": "11/11/1992"
+      "datanascimento": "1992-11-07T02:00:00.000Z"
     },
     {
       "id": 7,
@@ -54,31 +54,39 @@
       "sexo": "1",
       "idade": 22,
       "hobby": "Jogar Sinuca",
-      "datanascimento": "11/11/1989"
+      "datanascimento": "1989-11-07T02:00:00.000Z"
     },
     {
       "id": 8,
       "nome": "Jurive Hillux",
       "sexo": "1",
-      "idade": 25,
+      "idade": "0",
       "hobby": "Patinar",
-      "datanascimento": "1989-11-07T02:00:00.000Z"
+      "datanascimento": "2021-02-03T03:00:00.000Z"
     },
     {
       "id": 9,
       "nome": "Marcelinho Silva",
       "sexo": "1",
-      "idade": 20,
       "hobby": "Jogar Gears of War 3",
-      "datanascimento": "2001-10-10T03:00:00.000Z"
+      "datanascimento": "1997-02-12T02:00:00.000Z",
+      "idade": "24"
     },
     {
       "id": 11,
       "nome": "Marcelinho Silva",
       "sexo": "1",
-      "idade": 20,
+      "idade": "3",
       "hobby": "Jogar Gears of War 3",
-      "datanascimento": "2001-10-10T03:00:00.000Z"
+      "datanascimento": "2018-05-09T03:00:00.000Z"
+    },
+    {
+      "id": 12,
+      "nome": "Telma da silva",
+      "sexo": "2",
+      "idade": "2",
+      "hobby": "Pescar",
+      "datanascimento": "2019-02-06T02:40:56.000Z"
     }
   ]
 }

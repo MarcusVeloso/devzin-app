@@ -52,9 +52,6 @@ export class DevelopersNovoComponent implements OnInit {
         sexo: {
           required: 'Informe o sexo',
         },
-        idade: {
-          required: 'Informe a idade',
-        },
         hobby: {
           required: 'Informe um hobby',
         },
@@ -73,7 +70,7 @@ export class DevelopersNovoComponent implements OnInit {
       id:'',
       nome: ['', [Validators.required]],
       sexo: ['', [Validators.required]],
-      idade: ['', [Validators.required]],
+      idade: [''],
       hobby: ['', [Validators.required]],
       datanascimento: ['', [Validators.required]],
     });
@@ -91,6 +88,8 @@ export class DevelopersNovoComponent implements OnInit {
 
   gravar(){
     if(this.developerForm.dirty && this.developerForm.valid){
+      
+      this.calcularIdade(this.developerForm.value.datanascimento);
       this.developer = Object.assign({}, this.developer, this.developerForm.value);
 
       this.developerService.novoDeveloper(this.developer)
@@ -120,5 +119,18 @@ export class DevelopersNovoComponent implements OnInit {
   processarFalha(fail:any){
     this.errors = fail.error.errors;
     this.toastr.error('Houve um erro no processamento!', 'Ops! :(');
+  }
+
+  calcularIdade(dataAniversario: any){
+    
+    let dataAtual:any = new Date();
+    dataAtual = new Date();
+    let diffEmTempo = Math.abs(dataAtual - dataAniversario);
+    let tempoEmUmAno = 1000 * 60 * 60 * 24 * 364;
+    let diffEmAnos = diffEmTempo / tempoEmUmAno;
+    
+    this.developerForm.patchValue({
+      idade: diffEmAnos.toString().split('.')[0].toString()
+    })
   }
 }
